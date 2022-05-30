@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/testformcss.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/jqueryvalidation.js"></script>
+</head>
+<body>
+    
+    <div class="main">
+        <form  id="myform" method="post" >
+            <div>
+            <label for="">First Name</label> 
+            <input type="text" id="t1" name="name" class="name"><span class="error-color" id="msg"></span>
+            <br>
+            <label>Last Name</label>
+           
+            <input type="text" id="t2" name="surname" class="name"><span class="error-color" id="msg1"></span>
+            <br>
+            <label for="">Email</label>
+            <input type="Email" id="t3" class="email"><span class="error-color" id="msg3"></span>
+            <br>
+            <label for="">Phone Number</label>
+            <input type="text" class="pno" id="t4"><span id="msg4" class="error-color"></span>
+            <br>
+            <label for="">Age</label>
+            <select name="dropdown" class="drop" id="t5">
+                    <option value="">please select</option>
+                    <option value="8"> 8 </option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                </select><span class="error-color" id="msg5"></span>
+                <br>
+                <label for="">Gender</label>
+                <div class="radioposition">
+                    
+                      <input type="radio" id="male" value="male" class="gender" name="r"  class="gen">
+                      <label for="male">Male</label>
+              
+                      <input type="radio" id="female" value="female" class="gender" name="r" class="gen">
+                      <label for="female">female</label>
+              
+                      <input type="radio" id="other" value="other" class="gender" name="r"  class="gen">
+                      <label for="other">other</label>
+                    
+                    <span id="radiomsg" class="error-color"></span>
+                </div>
+
+                
+
+                <div>               
+                    
+                    <input  type="checkbox" id="check_box" name="check"  class="checkbox">
+                     <label for="">NEXT-DAY CONFIGURATION</label>
+                    <br>
+                    <label for="" class="pickup">Set Next Day Pick-Up time</label>
+                    <div >
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="Sunday" class="check_box"> 
+                                    <label for="Sunday">Sunday</label>
+                                </td>
+                                <div class="div1">
+                                <td>
+                                    <select name="dropdown" name="sun"  onblur="return dropdownvalidation()" class="Sunday" id="t6">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    
+                                </select><span class="error-color" id="msg6"></span>
+                                </td>
+                            </div >
+                           
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Monday" name="check" class="check_box"  > 
+                                    <label for="Monday">Monday</label></td>
+                                <td><select name="dropdown"   class="Monday" id="t7">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg7"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Tuesday" name="check" class="check_box"> 
+                                    <label for="Tuesday">Tuesday</label></td>
+                                <td><select name="dropdown"  onblur="return dropdownvalidation()" class="Tuesday" id="t8">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg8"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Wednesday" name="check" class="check_box"> 
+                                    <label for="Wednesday">Wednesday</label></td>
+                                <td><select name="dropdown"  onblur="return dropdownvalidation()" class="Wednesday" id="t9">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg9"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Thursday" name="check" class="check_box"> 
+                                    <label for="Thursday">Thursday</label></td>
+                                <td><select name="dropdown"  onblur="return dropdownvalidation()" class="Thursday" id="t10">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg10"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Friday" name="check" class="check_box">
+                                    <label for="Friday">Friday</label></td>
+                                <td><select name="dropdown"  onblur="return dropdownvalidation()" class="Friday" id="t11">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg11"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Saturday" name="check" class="check_box" > 
+                                    <label for="Saturday">Saturday</label></td>
+                                <td><select name="dropdown"  onblur="return dropdownvalidation()" class="Saturday" id="t12">
+                                    <option value="">Select Pick-up time</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select><span class="error-color" id="msg12"></span>
+                                </td>
+                            </tr>
+                           
+                            
+                        </table>
+                        <button  type="button" value="Salva modifiche" class="btn" onclick="redirect();" id="btn">Salva modifiche</button>
+                    </div>
+
+
+                </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

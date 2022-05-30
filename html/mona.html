@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    
+    
+</head>
+<body>
+  
+   
+    <table class="table2" id="myTable">
+        <thead>
+        <tr>
+            <th>Quanitity</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td>
+                <label for="" id="q"></label>
+                </td>
+                <td>
+                    <label for="" id="last"></label>
+                </td>
+                <td>
+                    <label for="" id="email"></label>
+                </td>
+                <td>
+                    <label for="" id="pno"></label>
+                </td>
+                <td>
+                    <label for="" id="ageid"></label>
+                </td>
+                <td>
+                    <label for="" id="g"></label>
+                </td>
+                <td>
+                    <label for="" id="sun"></label>
+                </td>
+                <td>
+                    <label for="" id="mon"></label>
+                </td>
+                <td>
+                    <label for="" id="tue"></label>
+                </td>
+                <td>
+                    <label for="" id="wed"></label>
+                </td>
+                <td>
+                    <label for="" id="thu"></label>
+                </td>
+                <td>
+                    <label for="" id="fri"></label>
+                </td>
+                <td>
+                    <label for="" id="sat"></label>
+                </td>
+            </tr>
+        
+        </tbody>
+    </table>
+                            
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        var fname=sessionStorage.getItem("first");
+        $("#first").html(fname);
+
+        var lname=sessionStorage.getItem("lastname");
+        $("#last").html(lname);
+
+        var em=sessionStorage.getItem("emailid");
+        $("#email").html(em);
+
+        var no=sessionStorage.getItem("phone");
+        $("#pno").html(no);
+
+        var a=sessionStorage.getItem("age");
+        $("#ageid").html(a);
+
+        var r=sessionStorage.getItem("gender");
+        $("#g").html(r);
+
+        var s=sessionStorage.getItem("sunday");
+        $("#sun").html(s);
+        var m=sessionStorage.getItem("monday");
+        $("#mon").html(m);
+
+        var t=sessionStorage.getItem("tuesday");
+        $("#tue").html(t);
+        var w=sessionStorage.getItem("wednesday");
+        $("#wed").html(w);
+
+        var th=sessionStorage.getItem("thursday");
+        $("#thu").html(th);
+
+        var f=sessionStorage.getItem("friday");
+        $("#fri").html(f);
+
+        var s=sessionStorage.getItem("saturday");
+        $("#sat").html(s);
+
+        
+
+
+
+    });
+</script>
